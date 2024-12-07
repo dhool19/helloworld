@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <div class="content-wrapper">
+    <h1>Login for the surprise!</h1>
+  </div>
+
+  <div class="content-wrapper">
+    <ion-item>
+      <ion-label position="floating">Enter Username</ion-label>
+      <ion-input [(ngModel)]="userName" type="text" clear-input></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password" clear-input></ion-input>
+    </ion-item>
+
+  </div>
+
+  <div class="error-message" *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div>
+    <ion-button (click)="goToSurprise()">Submit</ion-button>
+  </div>
+</ion-content>
